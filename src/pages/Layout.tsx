@@ -1,5 +1,5 @@
 
-import "./../Styles/Layout.css";
+import "./../styles/Layout.css";
 import { NavLink, Outlet } from "react-router";
 export const Layout=()=>{
    /*  const {cart, cartDispatch} = useContext(CartContext); */
