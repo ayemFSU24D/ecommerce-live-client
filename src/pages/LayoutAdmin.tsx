@@ -1,9 +1,9 @@
 import { NavLink, Outlet } from "react-router"
-import "./../Styles/LayoutAdmin.css";
+import "./../styles/LayoutAdmin.css";
 
 export const LayoutAdmin=()=>{
     return ( 
- 
+        
         <>
  <header>
  
