@@ -7,7 +7,7 @@ import { CartItem } from "../models/cart/Cartitem";
 
 export const Shop = () => {
     
-        const {cart, cartDispatch} = useContext(CartContext);
+        const { cartDispatch} = useContext(CartContext);
         const productList:ProductExt[] = JSON.parse(localStorage.getItem("products")||"[]")
         ;
     

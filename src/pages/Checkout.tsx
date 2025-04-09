@@ -23,10 +23,10 @@ export const Checkout = () => {
   const [showStripe, setShowStripe] = useState(false);
   const [showCustomerForm, setShowCustomerForm] = useState(true);
 
-  const [payload, setPayload] = useState<Payload>({ order_id: "", order_items: [] });
-  const [orderState, setOrderState] = useState<Order | null>(null);
+  const [, setPayload] = useState<Payload>({ order_id: "", order_items: [] });
+  const [, setOrderState] = useState<Order | null>(null);
   
-  const [setOrderId] = useState<OrderId>({id:0});
+  
   const [cart, setCart] = React.useState<CartItem[] >([]);
   /* const [storedCustomerId, setStoredCustomer] = useState<number>(() => {---------finns i handleOrder
     const savedCustomer = localStorage.getItem("existingCustomer");
