@@ -13,7 +13,7 @@ const stripePromise = loadStripe('pk_test_51R4JM8Qva8ur031RJvsjShY3l0J5bhZM5je1w
 export const GammalCheckout = () => {
   console.log("Kommit till Gammal checkout")
   /* const [payloadd, setPayloadd] = useState<Payload>(); */
-  const storedPayloadd:Payload =  JSON.parse(localStorage.getItem('storedPayload')||"");
+  const storedPayloadd:Payload =  JSON.parse(localStorage.getItem('storedPayload')||"{}");
   console.log("Den parsade payload",storedPayloadd)
    /* const parsedPayload = JSON.parse(storedPayloadd); */
   
