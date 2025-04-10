@@ -50,7 +50,7 @@ export const GammalCheckout = () => {
       
       
       // Create a Checkout Session
-      return fetch("http://ecommerce-live-api-new.vercel.app/stripe/create-checkout-session-embedded", {
+      return fetch("https://ecommerce-live-api-new.vercel.app/stripe/create-checkout-session-embedded", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

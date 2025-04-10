@@ -5,7 +5,7 @@ export const get = async <T>(url: string) => {
     
     return data;
   }; */
-  export const API_URL = "http://ecommerce-live-api-new.vercel.app";
+  export const API_URL = "https://ecommerce-live-api-new.vercel.app";
   
   export const handleRequest = async <T>(request: Promise<Response>): Promise<T> => {
     const response = await request;
