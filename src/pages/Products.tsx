@@ -10,8 +10,8 @@ import { Outlet } from "react-router";
 
 export const Products = () => {
     
-    const [products, setProducts]=useState<ProductExt[]>(
-        JSON.parse(localStorage.getItem("products")||"[]"))
+    const [products, setProducts]=useState<ProductExt[]>([]
+        /* JSON.parse(localStorage.getItem("products")||"[]") */)
     ;
    
     

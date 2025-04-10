@@ -1,15 +1,31 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductExt } from "../models/products/Product";
 import { CartACtionType } from "../redusers/CartReduser";
 import { CartContext } from "../contexts/CartContext";
 import { CartItem } from "../models/cart/Cartitem";
+import { getProducts } from "../services/ShopService";
 
 
 export const Shop = () => {
-    
-        const { cartDispatch} = useContext(CartContext);
-        const productList:ProductExt[] = JSON.parse(localStorage.getItem("products")||"[]")
-        ;
+        const [products, setProducts]=useState<ProductExt[]>([])
+        const {cart, cartDispatch} = useContext(CartContext);
+        useEffect(() => {
+          const fetchProducts = async () => {
+            try {
+              const productList: ProductExt[] = await getProducts();
+              if(productList)
+              setProducts(productList);
+        
+              // Om du vill spara dem lokalt
+              // localStorage.setItem("products", JSON.stringify(productList));
+            } catch (error) {
+              console.error("Failed to fetch products:", error);
+            }
+          };
+        
+          fetchProducts();
+        }, []);
+        
     
         const handleAddToCart = (product: ProductExt, quantity: number) => {
             cartDispatch({
@@ -18,7 +34,7 @@ export const Shop = () => {
             })
           }
     
-            return<>{productList.map((p)=>{
+            return<>{products.map((p)=>{
                 return <>
                 <div key={p.id}>
                     <p>{p.name}</p>
