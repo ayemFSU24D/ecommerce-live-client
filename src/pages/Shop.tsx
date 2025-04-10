@@ -8,7 +8,7 @@ import { getProducts } from "../services/ShopService";
 
 export const Shop = () => {
         const [products, setProducts]=useState<ProductExt[]>([])
-        const {cart, cartDispatch} = useContext(CartContext);
+        const { cartDispatch} = useContext(CartContext);
         useEffect(() => {
           const fetchProducts = async () => {
             try {
