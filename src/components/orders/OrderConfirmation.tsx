@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router"
-import { getOrderListByPaymentId, getOrderListDetailed } from "../../services/ShopService";
+import { getOrderListByPaymentId} from "../../services/ShopService";
 import { OrderById } from "../../models/orders/OrderById";
 
 export const OrderConfirmation=()=>{
