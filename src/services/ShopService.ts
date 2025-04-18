@@ -155,3 +155,7 @@ export const createCustomer = async (body: Customer): Promise<ExistingCustomer> 
     export const getOrderListDetailed = async (id:string): Promise<OrderById> => {
       const response = await handleRequest<OrderById>(fetch(`${API_URL}/orders/${id}`));
       return response; }
+
+      export const getOrderListByPaymentId = async (payment_id:string): Promise<OrderById> => {
+        const response = await handleRequest<OrderById>(fetch(`${API_URL}/orders/payment/${payment_id}`));
+        return response; }
