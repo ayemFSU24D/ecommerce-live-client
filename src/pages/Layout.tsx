@@ -1,8 +1,11 @@
 
-import "./../styles/Layout.css";
+import { useContext } from "react";
+import "./../Styles/Layout.css";
 import { NavLink, Outlet } from "react-router";
+import { CartContext } from "../contexts/CartContext";
 export const Layout=()=>{
-   /*  const {cart, cartDispatch} = useContext(CartContext); */
+    const { totalItems} = useContext(CartContext);
+
    return ( 
 
        <>
@@ -23,7 +26,7 @@ export const Layout=()=>{
         </li>
 
         <li>
-            <NavLink to={"/cart"} >🛒 </NavLink>
+        <NavLink to={"/cart"} >🛒{totalItems > 0 && `${totalItems}`} </NavLink>
         </li>
 
         <li>

@@ -25,7 +25,7 @@ export const Checkout = () => {
 
   const [, setPayload] = useState<Payload>({ order_id: "", order_items: [] });
   const [, setOrderState] = useState<Order | null>(null);
-  
+
   
   const [cart, setCart] = React.useState<CartItem[] >([]);
   /* const [storedCustomerId, setStoredCustomer] = useState<number>(() => {---------finns i handleOrder
