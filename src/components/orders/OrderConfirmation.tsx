@@ -30,6 +30,11 @@ export const OrderConfirmation=()=>{
     return<><h2>
         Order Sucess  
         </h2>
+        <div>{orderDetails?.customer_firstname}</div>
+        <div>{orderDetails?.customer_lastname}</div>
+        <div>Leverans Adress{orderDetails?.customer_city}</div>
+        <div>{orderDetails?.customer_country}</div>
+        <div>{orderDetails?.customer_email}</div>
         <p>
         {sessionId}
         </p>
@@ -40,8 +45,7 @@ export const OrderConfirmation=()=>{
                 <div>{i.product_name}</div>
                 <div>{i.quantity}</div>
                 <div>{i.quantity}</div>
-                <div>{}</div>
-                <div>{}</div>
+                <img src="" alt="" />
             </>
             
         })};
