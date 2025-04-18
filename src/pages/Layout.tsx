@@ -1,6 +1,6 @@
 
 import { useContext } from "react";
-import "./../Styles/Layout.css";
+import "./../styles/Layout.css";
 import { NavLink, Outlet } from "react-router";
 import { CartContext } from "../contexts/CartContext";
 export const Layout=()=>{
